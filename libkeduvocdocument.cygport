@@ -1,0 +1,24 @@
+inherit kf5
+
+NAME="libkeduvocdocument"
+VERSION=15.04.3
+RELEASE=1
+CATEGORY="Libs"
+SUMMARY="KDE 5 KVTML library"
+DESCRIPTION="Contains KEduVocDocument and its related class for reading from
+and writing to the KVTML format (and others too). Currently used by kanagram,
+khangman, parley, kwordquiz"
+
+PKG_NAMES="libKEduVocDocument5 libKEduVocDocument-devel"
+libKEduVocDocument5_REQUIRES="kdeedu-data"
+libKEduVocDocument5_CONTENTS="
+	usr/bin/cygKEduVocDocument-5.dll
+	usr/share/doc/libkeduvocdocument/
+"
+libKEduVocDocument_devel_REQUIRES="libQt5Core-devel"
+libKEduVocDocument_devel_OBSOLETES="libkdeedu-devel"
+libKEduVocDocument_devel_CONTENTS="
+	usr/include/libkeduvocdocument/
+	usr/lib/cmake/libkeduvocdocument/
+	usr/lib/libKEduVocDocument.dll.a
+"
